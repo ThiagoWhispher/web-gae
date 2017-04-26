@@ -1,0 +1,28 @@
+<nav id="my_nav" class="nav-position" role="navigation">
+    <script>
+        function openMenu() {
+            var nav_menu = document.getElementById('nav_menu');
+            var button_menu = document.getElementById('button_menu');
+
+            button_menu.classList.add('none');
+            button_menu.classList.remove('block');
+            nav_menu.classList.remove('none');
+            nav_menu.classList.add('block');
+        }
+    </script>
+
+    <button id="button_menu" class="nav-menu" onclick="openMenu()">
+        Open Menu
+    </button>
+    <h4 id="nav_menu" class="none">
+        <a class="btn-nav" href="/">
+            Home
+        </a>
+        <a class="btn-nav" href="/curso">
+            Curso
+        </a>
+        <a class="btn-nav" href="/professor">
+            Professor
+        </a>
+    </h4>
+</nav>

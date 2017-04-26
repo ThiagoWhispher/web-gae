@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div id="editar_curso" class="container-ext center-page">
+
+    <h1>EDITAR CURSO</h1>
+
+    <form action="/updatecurso?key={{curso.key.urlsafe()}}" method="post">
+        <div><label>Nome</label></div>
+        <div><input name="nome" type="text" required="true" value="{{curso.nome}}"></div>
+        <div><label>Períodos</label></div>
+        <div><input name="periodos" type="number" min="1" required="true" value="{{curso.periodos}}"></div>
+        <div><label>Semestral</label>
+        <div class="padding-bot-10">
+            <label for="inputYes">Sim</label>
+            <input type="radio" name="semestral" value="Sim" id="inputYes" required/>
+            <label for="inputNo">Não</label>
+            <input type="radio" name="semestral" value="Nao" id="inputNo"/>
+        </div>
+        
+        <input type="submit" value="Alterar">
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div id="editar_disciplina" class="container-ext center-page">
+
+    <h1>EDITAR DISCIPLINA</h1>
+
+    <form action="/updatedisciplina?key={{disciplina.key.urlsafe()}}" method="post">
+         <div><label>Nome:</label></div>
+        <div><input type="text" name="nome" required="true" value="{{disciplina.nome}}"/></div>
+        <div><label>Periodo:</label></div>
+        <div><input type="number" name="periodo" required="true" min="1" value="{{disciplina.periodo}}"/></div>
+        <input type="submit" value="Alterar">
+    </form>
+</div>
+
+{% endblock %}
